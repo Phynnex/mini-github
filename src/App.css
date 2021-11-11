@@ -177,6 +177,13 @@ img {
   margin: 3rem 0;
 }
 
+
+repoStyle {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 2rem;
+  color:green !important;
+}
 /* Grid */
 .grid-2 {
   display: grid;
@@ -328,10 +335,6 @@ input {
 }
 
 input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='date'],
-select,
 textarea {
   display: block;
   width: 40%;
@@ -340,6 +343,7 @@ textarea {
   border: 1px solid #ccc;
   margin: 1rem auto;
   border-radius: 8px;
+  text-align: center;
 }
 
 input[type='submit'],
@@ -365,11 +369,11 @@ table th {
     display: none;
   }
 
-  .grid-2,
+  /* .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
-  }
+  } */
 
   /* Text Styles */
   .x-large {
@@ -382,6 +386,18 @@ table th {
 
   .lead {
     font-size: 1rem;
+  }
+
+  input[type='text'],
+  textarea {
+  width: 50%;
+  font-size: 0.8rem;
+  }
+
+  .btn-block {
+  width: 50%;
+  font-size: 0.8rem;
+  
   }
 
   

@@ -36,7 +36,10 @@ const User = ({ match }) => {
   return (
     <Fragment>
       <Link to="/" className="btn btn-light">
-        <i className="fa fa-arrow-left" aria-hidden="true"> Back</i>
+        <i className="fa fa-arrow-left" aria-hidden="true">
+          {" "}
+          Back
+        </i>
       </Link>
       Hireable:{" "}
       {hireable ? (
@@ -56,12 +59,14 @@ const User = ({ match }) => {
           <p>Location: {location}</p>
         </div>
         <div>
-          {bio && (
-            <Fragment>
-              <h3>Bio</h3>
-              <p>{bio}</p>
-            </Fragment>
+          
+          Bio:{" "}
+          {bio ? (
+          <p>{bio}</p>
+          ) : (
+            <p> </p>
           )}
+
           <a href={html_url} className="btn btn-dark my-1">
             Visit Github Profile
           </a>
@@ -98,19 +103,15 @@ const User = ({ match }) => {
         <div className="badge badge-light">Public Repos: {public_repos}</div>
         <div className="badge badge-dark">Public Gists: {public_gists}</div>
       </div>
-      <div style={repoStyle}>
+      <div className="repoStyle">
         <Repos repos={repos} />
       </div>
     </Fragment>
   );
 };
 
-const repoStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gridGap: "2rem",
-  color:'green !important'
-};
+
+
 
 
 
