@@ -27,7 +27,6 @@ const User = ({ match }) => {
     followers,
     following,
     public_repos,
-    public_gists,
     hireable,
   } = user;
 
@@ -56,17 +55,10 @@ const User = ({ match }) => {
             style={{ width: "150px" }}
           />
           <h1>{name}</h1>
-          <p>Location: {location}</p>
+          <strong>Location: {location}</strong>
         </div>
         <div>
-          
-          Bio:{" "}
-          {bio ? (
-          <p>{bio}</p>
-          ) : (
-            <p> </p>
-          )}
-
+          <strong>Bio:</strong> {bio ? <p>{bio}</p> : <p> </p>}
           <a href={html_url} className="btn btn-dark my-1">
             Visit Github Profile
           </a>
@@ -101,9 +93,8 @@ const User = ({ match }) => {
         <div className="badge badge-primary">Followers: {followers}</div>
         <div className="badge badge-success">Following: {following}</div>
         <div className="badge badge-light">Public Repos: {public_repos}</div>
-        <div className="badge badge-dark">Public Gists: {public_gists}</div>
       </div>
-      <div className="repoStyle">
+      <div >
         <Repos repos={repos} />
       </div>
     </Fragment>

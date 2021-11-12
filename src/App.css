@@ -112,9 +112,16 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: rgb(211, 235, 241) 1px solid;
   margin: 0.7rem 0;
 }
+
+/* .card {
+  display: grid;
+  grid-template-columns: repeat(3 2fr);
+  grid-gap: 2rem;
+  
+} */
 
 /* List */
 .list {
@@ -178,12 +185,19 @@ img {
 }
 
 
-repoStyle {
+.repoStyle {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   color:green !important;
 }
+
+.userStyle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
 /* Grid */
 .grid-2 {
   display: grid;
@@ -369,12 +383,6 @@ table th {
     display: none;
   }
 
-  /* .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  } */
-
   /* Text Styles */
   .x-large {
     font-size: 3rem;
@@ -397,8 +405,14 @@ table th {
   .btn-block {
   width: 50%;
   font-size: 0.8rem;
-  
   }
 
+  .userStyle {
+  grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card{
+    grid-template-columns: repeat(2, 1fr);
+  }
   
 }
